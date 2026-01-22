@@ -2,7 +2,7 @@
 
 A RESTful API for managing inventory items with **Event Sourcing** architecture. Built with Laravel 12.x and SQLite.
 
-## 🏗️ Architecture
+## Architecture
 
 This implementation uses **Event Sourcing** to track all changes to inventory items as immutable events. Instead of just updating records, every state change (create, update, delete) is stored as an event. The current state is maintained as a projection/read model for fast queries.
 
@@ -12,7 +12,7 @@ This implementation uses **Event Sourcing** to track all changes to inventory it
 - Time-travel debugging capabilities
 - Event history API endpoint for transparency
 
-## 📐 Architecture Diagrams
+## Architecture Diagrams
 
 ### System Architecture
 
@@ -138,14 +138,14 @@ classDiagram
     ItemProjector ..> ItemDeleted : projects
 ```
 
-## 📋 Requirements
+## Requirements
 
 - PHP 8.2+
 - Composer
 - SQLite (or MySQL/PostgreSQL)
 - DDEV (optional, for local development)
 
-## 🚀 Installation
+## Installation
 
 ### 1. Clone the repository
 ```bash
@@ -196,7 +196,7 @@ php artisan serve
 
 The API will be available at `http://localhost:8000`
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Base URL
 ```
@@ -345,7 +345,7 @@ curl http://localhost:8000/api/items/1/events
 ]
 ```
 
-## ⚠️ Error Handling
+## Error Handling
 
 ### Validation Error (422)
 ```json
@@ -365,7 +365,7 @@ curl http://localhost:8000/api/items/1/events
 }
 ```
 
-## 🧪 Testing
+## Testing
 
 Run the test suite:
 ```bash
@@ -442,7 +442,7 @@ This will:
 2. Replay all events in chronological order
 3. Rebuild the current state
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 app/
@@ -458,7 +458,7 @@ tests/
 └── Feature/             # Feature tests
 ```
 
-## 🛠️ Development with DDEV
+## Development with DDEV
 
 If using DDEV:
 
@@ -478,7 +478,3 @@ ddev artisan test
 # Access the API
 # Available at https://<project-name>.ddev.site/api
 ```
-
-## 📄 License
-
-This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
