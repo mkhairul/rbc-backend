@@ -33,10 +33,10 @@ graph TB
     API -->|Query| Items
     API -->|HTTP Response| Client
     
-    style Events fill:#f9f,stroke:#333
-    style Items fill:#bbf,stroke:#333
-    style EventStore fill:#bfb,stroke:#333
-    style Projector fill:#fbf,stroke:#333
+    style Events fill:#0051A5,stroke:#333
+    style Items fill:#314F40,stroke:#333
+    style EventStore fill:#2596be,stroke:#333
+    style Projector fill:#0051A5,stroke:#333
 ```
 
 ### Event Sourcing Flow
